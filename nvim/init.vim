@@ -11,7 +11,7 @@ let mapleader = " "
 if exists('g:vscode')
     " VSCode extension
 else
-	call plug#begin(stdpath('data') . '/plugged')
+	call plug#begin('$VIMCONFIG/plugged')
 	Plug 'lervag/vimtex'
 	call plug#end()
 endif
