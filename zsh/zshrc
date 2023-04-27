@@ -1,27 +1,30 @@
 set -o vi
 bindkey -v 
+bindkey "^R" history-incremental-search-backward
 
 export DEFAULT_USER="$(whoami)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('~/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/lukezhu/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "~/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "~/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/lukezhu/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/lukezhu/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="~/opt/anaconda3/bin:$PATH"
+        export PATH="/Users/lukezhu/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 alias vim='nvim'
+alias ll="ls -l"
+alias llt="ls -lt"
 
+# get ls to colorize its outputs
 export CLICOLOR=1
-
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # use block in normal mode and beam in insert mode
@@ -52,3 +55,20 @@ cursor_mode() {
 }
 
 cursor_mode
+
+# function to get the conda environment name
+# https://unix.stackexchange.com/a/701293
+function parse_conda_env () {
+    if [ ! -z "$CONDA_DEFAULT_ENV" ] # non-empty string
+    then
+		echo "($(basename "$CONDA_DEFAULT_ENV")) "
+    fi
+}
+
+# Allows for functions in prompt
+setopt PROMPT_SUBST 
+
+# single quote to allow for re-evaluation
+# https://www.makeuseof.com/customize-zsh-prompt-macos-terminal/
+# link: https://unix.stackexchange.com/a/273567
+PROMPT='%F{cyan}$(parse_conda_env)%F{yellow}%m %(6~|%-1~/.../%3~|%4~)> %f'
