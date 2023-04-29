@@ -20,5 +20,3 @@ augroup vimtex_event_focus
 	au!
 	au User VimtexEventViewReverse call s:TexFocusVim()
 augroup END
-
-
