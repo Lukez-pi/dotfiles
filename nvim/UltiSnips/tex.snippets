@@ -1,0 +1,68 @@
+snippet begin "begin{} / end{}" 
+\begin{${1:env}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet thrm 
+\begin{theorem}[${1:thrm_name}]
+\label{thrm:${2:thrm_label}}
+	${3:start_theorem}
+\end{theorem}
+endsnippet
+
+snippet proof
+\begin{proof}
+	${1:start_proof}
+\end{proof}
+endsnippet
+
+snippet beginprop 
+\begin{proposition}[${1:prop_name}]
+\label{prop:${2:prop_label}}
+	${3:prop}
+\end{proposition}
+endsnippet
+
+snippet begindef 
+\begin{definition}[${1:def_name}]
+\label{def:${2:def_label}}
+	${3:def}
+\end{definition}
+endsnippet
+
+snippet subsection 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{${1}}
+\label{section:${2}}
+endsnippet
+
+snippet set "\{element\}"
+\set{${0:${VISUAL}}}
+endsnippet
+
+snippet basiceqn "\[ eqn \]"
+\[${1:insert_eqn}\]
+endsnippet
+
+snippet eqn "begin{equation} end{equation}"
+\begin{equation} \label{eqn:${1:label}}
+	${2:eqn}
+\end{equation}
+endsnippet
+
+snippet bold
+\textbf{${0:${VISUAL}}}
+endsnippet
+
+snippet ital
+\textit{${0:${VISUAL}}}
+endsnippet
+
+snippet textrm
+\textrm{${0:${VISUAL}}}
+endsnippet
+
+snippet divider
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+endsnippet
