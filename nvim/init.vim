@@ -13,5 +13,13 @@ if exists('g:vscode')
 else
 	call plug#begin('$VIMCONFIG/plugged')
 	Plug 'lervag/vimtex'
+	Plug 'sirver/ultisnips'
+	Plug 'honza/vim-snippets'
+	Plug 'neomake/neomake'
 	call plug#end()
 endif
+
+" source every plugin configs
+for file in split(glob('$VIMCONFIG/pluggedconf/*.nvimrc'), '\n')
+	exe 'source' file
+endfor
