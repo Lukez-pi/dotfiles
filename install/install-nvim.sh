@@ -11,7 +11,12 @@ if [ ! -d "$VIMCONFIG" ]
 fi
 
 ln -sf "$DOTFILES_DIR/nvim/init.vim" "$VIMCONFIG"
+ln -sf "$DOTFILES_DIR/nvim/pluggedconf" "$VIMCONFIG"
 ln -sf "$DOTFILES_DIR/nvim/ftplugin" "$VIMCONFIG"
 ln -sf "$DOTFILES_DIR/nvim/autoload" "$VIMCONFIG"
 
 mkdir -p "$VIMCONFIG/plugged"
+
+rm -rf "$VIMCONFIG/UltiSnips"
+ln -sf "$DOTFILES_DIR/nvim/UltiSnips" "$VIMCONFIG"
+
