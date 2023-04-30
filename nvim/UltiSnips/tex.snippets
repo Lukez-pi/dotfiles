@@ -1,7 +1,86 @@
-snippet begin "begin{} / end{}" 
+# many snippets copied from link: https://castel.dev/post/lecture-notes-1/
+# see :h UltiSnips-snippet-options for details:
+# b - expand if at beginning of the line 
+# i - in-word expansion
+# w - expand at word boundaries
+# r - regular expression
+# A - autoexpand
+
+snippet beg "begin environment" bA
 \begin{${1:env}}
 	${0:${VISUAL}}
 \end{$1}
+endsnippet
+
+snippet mk "in-line math" wA
+$${1}$
+endsnippet
+
+# regular subscript
+snippet sub "subscript" i
+_{$1}$0
+endsnippet
+
+# auto-subscript {letter}{digit}
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+# auto-subscript {letter}_{digitdigit}
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+snippet td "superscript" iA
+^{$1}$0
+endsnippet
+
+# square
+snippet sq "square" iA
+^2
+endsnippet
+
+# cube
+snippet cb "cube" iA
+^3
+endsnippet
+
+snippet compl "complement" iA
+^{c}
+endsnippet
+
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+# see link https://castel.dev/post/lecture-notes-1/ for explanation
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+priority 10
+snippet "hat" "hat" riA
+\hat{$1}$0
+endsnippet
+
+priority 100
+snippet "([a-zA-Z])hat" "hat" riA
+\hat{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+snippet "bar" "bar" riA
+\overline{$1}$0
+endsnippet
+
+priority 100
+snippet "([a-zA-Z])bar" "bar" riA
+\overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+snippet tt "\text{}" i
+\text{$1}$0
 endsnippet
 
 snippet thrm 
