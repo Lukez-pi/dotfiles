@@ -1,7 +1,10 @@
 let maplocalleader = " "
+
+" custom shortcut for compiling
+nmap <localleader>l <Plug>(vimtex-compile)
 " custom shortcut for forward search
 nmap <localleader>v <Plug>(vimtex-view)
-" custom shortcut for forward search
+" custom shortcut for cleaning
 nmap <localleader>c <Plug>(vimtex-clean)
 
 let g:vimtex_view_method = 'skim'
