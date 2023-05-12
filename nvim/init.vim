@@ -2,7 +2,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let $packpath = $runtimepath
 source ~/.vimrc
 
-let g:python3_host_prog="/Users/lukezhu/opt/anaconda3/bin/python"
+let g:python3_host_prog="/Users/lukezhu/miniconda3/bin/python3"
 
 filetype plugin indent on
 syntax enable
