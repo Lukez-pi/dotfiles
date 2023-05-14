@@ -79,6 +79,14 @@ snippet "([a-zA-Z])bar" "bar" riA
 \overline{`!p snip.rv=match.group(1)`}
 endsnippet
 
+snippet tb "bold" i
+\textbf{${0:${VISUAL}}}
+endsnippet
+
+snippet ti "italics" i
+\textit{${0:${VISUAL}}}
+endsnippet
+
 snippet tt "\text{}" i
 \text{$1}$0
 endsnippet
@@ -130,17 +138,6 @@ snippet eqn "begin{equation} end{equation}"
 \end{equation}
 endsnippet
 
-snippet bold
-\textbf{${0:${VISUAL}}}
-endsnippet
-
-snippet ital
-\textit{${0:${VISUAL}}}
-endsnippet
-
-snippet textrm
-\textrm{${0:${VISUAL}}}
-endsnippet
 
 snippet divider
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
