@@ -84,4 +84,4 @@ setopt PROMPT_SUBST
 # single quote to allow for re-evaluation
 # https://www.makeuseof.com/customize-zsh-prompt-macos-terminal/
 # link: https://unix.stackexchange.com/a/273567
-PROMPT='%F{cyan}$(parse_conda_env)%F{yellow}%m %(5~|.../%3~|%~)> %f'
+PROMPT='%F{cyan}$(parse_conda_env)%F{yellow}%m %T %(5~|.../%3~|%~)> %f'
