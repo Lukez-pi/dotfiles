@@ -4,6 +4,9 @@ source ~/.vimrc
 
 let g:python3_host_prog="/Users/lukezhu/miniconda3/bin/python3"
 
+" remap the escape key to jj in insert mode
+inoremap jk <Esc>
+
 filetype plugin indent on
 syntax enable
 let mapleader = " "
