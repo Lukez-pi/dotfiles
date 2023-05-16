@@ -24,6 +24,11 @@ set wildmode=longest:full,full
 " remap the escape key to jj in insert mode
 inoremap jk <Esc>
 
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 filetype plugin indent on
 syntax enable
 let mapleader = " "
