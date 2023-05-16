@@ -24,6 +24,7 @@ set wildmode=longest:full,full
 " remap the escape key to jj in insert mode
 inoremap jk <Esc>
 
+" link that explains tabs vs softtabls: https://vi.stackexchange.com/a/28017
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
