@@ -7,9 +7,12 @@ nmap <localleader>v <Plug>(vimtex-view)
 " custom shortcut for cleaning
 nmap <localleader>c <Plug>(vimtex-clean)
 
-let g:vimtex_view_method = 'skim'
-let g:vimtex_compiler_method = 'latexmk'
+" navigate within wrapped lines
+" link: https://stackoverflow.com/a/9131526
+nnoremap j gj
+nnoremap k gk
 
+" to trigger inverse search, press shift+cmd+left click
 " custom function for returning focus after inverse search
 " replace `Terminal` with name of terminal application
 " link: https://www.ejmastnak.com/tutorials/vim-latex/pdf-reader/#refocus-nvim-macos-inverse
