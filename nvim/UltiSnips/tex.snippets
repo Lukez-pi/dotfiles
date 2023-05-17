@@ -5,6 +5,7 @@
 # w - expand at word boundaries
 # r - regular expression
 # A - autoexpand
+# :call UltiSnips#RefreshSnippets() to refresh snippets in vim
 
 snippet beg "begin environment" bA
 \begin{${1:env}}
@@ -89,6 +90,54 @@ endsnippet
 
 snippet tt "\text{}" i
 \text{$1}$0
+endsnippet
+
+snippet real "real number" i
+\mathbb{R}
+endsnippet
+
+snippet mathbb "mathbb" i
+\mathbb{$1}$0
+endsnippet
+
+snippet mathcal "mathcal" i
+\mathcal{$1}$0
+endsnippet
+
+snippet calp "mathcal_P" i
+\mathcal{P}
+endsnippet
+
+snippet al "alpha" w
+\alpha
+endsnippet
+
+snippet be "beta" w
+\beta
+endsnippet
+
+snippet ga "gamma" w
+\gamma
+endsnippet
+
+snippet pi "pi" w
+\pi
+endsnippet
+
+snippet la "lambda" w
+\lambda
+endsnippet
+
+snippet par "partial derivation" w
+\frac{\partial $1}{\partial $2}$0
+endsnippet
+
+snippet sval "state-value function" w
+V_{\pi}(s)
+endsnippet
+
+snippet qval "state-value function" w
+Q_{\pi}(s,a)
 endsnippet
 
 snippet thrm 
