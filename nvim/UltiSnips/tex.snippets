@@ -50,12 +50,12 @@ snippet compl "complement" iA
 endsnippet
 
 
-snippet // "Fraction" iA
+snippet // "Fraction" i
 \\frac{$1}{$2}$0
 endsnippet
 
 # see link https://castel.dev/post/lecture-notes-1/ for explanation
-snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wr
 \\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 
@@ -80,11 +80,11 @@ snippet "([a-zA-Z])bar" "bar" riA
 endsnippet
 
 snippet tb "bold" i
-\textbf{${0:${VISUAL}}}
+\textbf{$1}$0
 endsnippet
 
 snippet ti "italics" i
-\textit{${0:${VISUAL}}}
+\textit{$1}$0
 endsnippet
 
 snippet tt "\text{}" i
