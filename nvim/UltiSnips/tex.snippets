@@ -50,7 +50,6 @@ snippet compl "complement" iA
 ^{c}
 endsnippet
 
-
 snippet // "Fraction" i
 \\frac{$1}{$2}$0
 endsnippet
@@ -61,12 +60,12 @@ snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wr
 endsnippet
 
 priority 10
-snippet "hat" "hat" ri
+snippet "hat" "hat" r
 \hat{$1}$0
 endsnippet
 
 priority 100
-snippet "([a-zA-Z])hat" "hat" ri
+snippet "([a-zA-Z])hat" "hat" r
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 
@@ -78,6 +77,10 @@ endsnippet
 priority 100
 snippet "([a-zA-Z])bar" "bar" riA
 \overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+snippet hl "highlight" i
+\hl{$1}$0
 endsnippet
 
 snippet tb "bold" i
@@ -114,6 +117,15 @@ endsnippet
 
 snippet be "beta" w
 \beta
+endsnippet
+
+
+snippet De "Delta" w
+\Delta
+endsnippet
+
+snippet de "delta" w
+\delta
 endsnippet
 
 snippet ga "gamma" w
