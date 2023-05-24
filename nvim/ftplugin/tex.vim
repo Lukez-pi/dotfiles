@@ -1,3 +1,5 @@
+set spelllang=en_gb spell
+
 let maplocalleader = " "
 
 " custom shortcut for compiling
