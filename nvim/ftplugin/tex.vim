@@ -8,9 +8,9 @@ nmap <localleader>v <Plug>(vimtex-view)
 nmap <localleader>c <Plug>(vimtex-clean)
 
 " navigate within wrapped lines
-" link: https://stackoverflow.com/a/9131526
-nnoremap j gj
-nnoremap k gk
+" https://neovim.discourse.group/t/how-do-i-jump-to-relative-line-number-with-gj-gk/2203/2
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
 
 " to trigger inverse search, press shift+cmd+left click
 " custom function for returning focus after inverse search
