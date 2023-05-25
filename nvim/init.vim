@@ -1,6 +1,6 @@
 " to disable mouse support in nvim 
 set mouse=
-let g:python3_host_prog="~/anaconda3/bin/python3"
+let g:python3_host_prog="$CONDA_PYTHON_EXE"
 
 " highlight all searches
 set hlsearch
