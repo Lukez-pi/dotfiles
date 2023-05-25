@@ -1,5 +1,6 @@
-" set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let g:python3_host_prog="/Users/lukezhu/miniconda3/bin/python3"
+" to disable mouse support in nvim 
+set mouse=
+let g:python3_host_prog="~/anaconda3/bin/python3"
 
 " highlight all searches
 set hlsearch
@@ -21,8 +22,9 @@ set wildmode=longest:full,full
 : autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 :augroup END
 
-" remap the escape key to jj in insert mode
+" remap the escape key to jk or kj in insert mode
 inoremap jk <Esc>
+inoremap kj <Esc>
 
 " link that explains tabs vs softtabls: https://vi.stackexchange.com/a/28017
 set tabstop=4
@@ -32,7 +34,11 @@ set expandtab
 
 filetype plugin indent on
 syntax enable
+set foldenable
+set foldmethod=indent
+
 let mapleader = " "
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 if exists('g:vscode')
     " VSCode extension
@@ -43,7 +49,7 @@ else
 	Plug 'honza/vim-snippets'
 	Plug 'neomake/neomake'
     Plug 'Mxrcon/nextflow-vim'
-	call plug#end()
+call plug#end()
 endif
 
 " source every plugin configs
