@@ -1,0 +1,21 @@
+snippet imp "import" b
+import ${0:module}
+endsnippet
+
+snippet plt "import matplotlib.pyplot as plt" b
+import matplotlib.pyplot as plt
+endsnippet
+
+snippet from "from _ import _" b
+from ${1:package} import ${0:module}
+endsnippet
+
+snippet di "dictionary.items()" b
+for ${1:key}, ${2:value} in ${3:dictionary}.items():
+	${0}
+endsnippet
+
+snippet edi "enumerate dictionary.items()" b
+for ${1:idx}, (${2:key}, ${3:value}) in enumerate(${4:dictionary}.items()):
+	${0}
+endsnippet
