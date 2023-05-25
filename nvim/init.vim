@@ -42,6 +42,7 @@ else
 	Plug 'sirver/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'neomake/neomake'
+    Plug 'Mxrcon/nextflow-vim'
 	call plug#end()
 endif
 

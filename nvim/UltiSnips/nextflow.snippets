@@ -1,0 +1,14 @@
+snippet process "process" b
+process ${1} {
+	publishDir  "$baseDir/nf_output", pattern: , mode: 
+	conda "${CONDA_PREFIX}/envs/ "
+	input:
+		${2}
+	output:
+		${3}
+	shell:
+	'''
+		${4}
+	'''
+}
+endsnippet
