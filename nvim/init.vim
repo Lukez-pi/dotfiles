@@ -49,6 +49,8 @@ else
 	Plug 'honza/vim-snippets'
 	Plug 'neomake/neomake'
     Plug 'Mxrcon/nextflow-vim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 endif
 
