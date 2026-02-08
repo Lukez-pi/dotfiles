@@ -34,6 +34,8 @@ set expandtab
 
 filetype plugin indent on
 syntax enable
+syntax on
+colorscheme vim
 set foldenable
 set foldmethod=indent
 
