@@ -85,3 +85,7 @@ setopt PROMPT_SUBST
 # https://www.makeuseof.com/customize-zsh-prompt-macos-terminal/
 # link: https://unix.stackexchange.com/a/273567
 PROMPT='%F{cyan}$(parse_conda_env)%F{yellow}%m %T %(5~|.../%3~|%~)> %f'
+
+autoload -Uz compinit && compinit
+autoload bashcompinit && bashcompinit
+eval "$(register-python-argcomplete dx|sed 's/-o default//')"
