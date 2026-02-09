@@ -53,6 +53,7 @@ else
     Plug 'Mxrcon/nextflow-vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'github/copilot.vim'
 call plug#end()
 endif
 
