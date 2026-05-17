@@ -5,6 +5,9 @@ let g:python3_host_prog="$CONDA_PYTHON_EXE"
 " highlight all searches
 set hlsearch
 
+" Enable system clipboard integration
+set clipboard+=unnamedplus
+
 " display number and relative line number (hybrid mode)
 set number relativenumber
 
